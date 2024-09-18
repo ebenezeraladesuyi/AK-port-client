@@ -10,6 +10,10 @@ export default {
         mont : ['Montserrat', 'sans-serif'],
         pop : ['Poppins', 'sans-serif'],
       },
+      backgroundImage: {
+        'hero-bg' : "url('/src/assets/images/bg/main-bg.jpg')",
+        'exp-bg' : "url('/src/assets/images/bg/Services-bg.png')",
+      }
     },
   },
   plugins: [],

@@ -15,14 +15,14 @@ const Hero = () => {
 
   return (
     <motion.div 
-        className="w-full min-h-[100vh] bg-[#000000] flex justify-center items-center pb-[30px]"
+        className="w-full min-h-[100vh] bg-[#000000] bg-hero-bg bg-cover bg-center flex justify-center items-center pb-[30px]"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
     >
-        <div className="w-[90%] h-full flex flex-col md:flex-row-reverse justify-center items-center gap-5 mt-[100px] md:mt-[110px] md:justify-between">
+        <div className="w-[90%] h-full flex flex-col md:flex-row-reverse justify-center items-center gap-5 mt-[110px] md:mt-[110px] md:justify-between">
             <div className="w-[90%] lg:w-[45%]">
-                <motion.img className="w-full" src={heroImage} alt="" 
+                <motion.img className="w-full animate-puls" src={heroImage} alt="" 
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1.8, delay: 2.0 }}

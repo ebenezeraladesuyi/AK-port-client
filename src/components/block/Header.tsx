@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from "../../assets/images/logo/AkeenSuaraLogo-white.png";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
@@ -8,14 +8,32 @@ import { motion } from "framer-motion";
 
 const Header = () => {
 
+    // mobile screen dropdown
     const [dropdown, setDropdown] = React.useState(false)
 
     const showDropdown = () => {
         setDropdown(!dropdown)
     }
 
+    // change background color onScroll
+    const [isScrolled, setIsScrolled] = React.useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsScrolled(true)
+            } else {
+                setIsScrolled(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
   return (
-    <motion.div className={`w-full h-[80px] lg:h-[130px flex lg:justify-center items-center shadow-m font-pop fixed z-40 bg-[#000000] text-white  lg:shadow-md `}
+    <motion.div className={`w-full h-[90px] lg:h-[130px flex lg:justify-center items-center font-pop fixed z-40 bg-[#000000 text-white transition-all duration-1000 ease-in-out ${isScrolled ? 'bg-[#000000c8] shadow-md' : ''}`}
     initial={{ opacity: 0, y: -50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.7 }}
@@ -33,7 +51,7 @@ const Header = () => {
             {/* <div className='flex justify-between items-center w-full'> */}
             <NavLink to='/'>
                 <div className='lg:hidde p-1 rounded-md shadow-m w-[70px] md:w-[80px] z-40 h- py-0'>
-                    <img className="w-full  " src={logo} alt="Akeem-Suara" />
+                    <img className="w-full " src={logo} alt="Akeem-Suara" />
                     {/* <h5 className='text-black font-bold'>GAC</h5> */}
                 </div>
             </NavLink>
