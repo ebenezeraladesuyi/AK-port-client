@@ -20,6 +20,7 @@ export default {
         'ts2' : "url('/src/assets/images/testimonials/ts2.jpg')",
         'ts3' : "url('/src/assets/images/testimonials/ts3.jpg')",
         'ts4' : "url('/src/assets/images/testimonials/ts4.jpg')",
+        'con-img' : "url('/src/assets/images/contact/contact.svg')",
       }
     },
   },

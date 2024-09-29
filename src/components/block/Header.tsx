@@ -81,7 +81,7 @@ const Header = () => {
 
                     {/* <Link offset={-100} smooth={true} duration={500} to="services"> */}
                     <NavLink 
-                        to='/blog'
+                        to='/blogs'
                         className={({isActive}) => `text-[#fff] hover:text-[#23a1db] cursor-pointer font-semibold transition-all duration-300 ease-in-out ${isActive ? 'text-blue-400' : ''}`}
                     >
                         <ol>Blog</ol>
@@ -154,7 +154,7 @@ const Header = () => {
 
                         {/* <Link  offset={-100} smooth={true} duration={500} to="services"> */}
                         <NavLink 
-                            to='/blog'
+                            to='/blogs'
                             className={({isActive}) => ` text-white hover:text-[#eedfb0] cursor-pointer font-semibold transition-all duration-300 ease-in-out ${isActive ? 'text-blue-400' : ''}`}
                         >
                             <ol>Blog</ol>

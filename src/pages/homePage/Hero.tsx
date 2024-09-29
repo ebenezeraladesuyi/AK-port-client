@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaStackOverflow } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaSlack } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 
 const Hero = () => {
@@ -68,13 +69,15 @@ const Hero = () => {
                     The combination of creative insights, technical expertise, and the latest technologies for transformative results.
                 </motion.h2>
 
-                <motion.button className="bg-blue-400 text-white px-7 animate-pulse"
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.4, delay: 1.6 }}
-                >
-                    Contact
-                </motion.button>
+                <NavLink to='/contact'>
+                    <motion.button className="bg-blue-400 text-white px-7 animate-pulse"
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.4, delay: 1.6 }}
+                    >
+                        Contact
+                    </motion.button>
+                </NavLink>
 
                 <div className="flex items-center gap-2 text-white text-[20px] lg:text-[30px] mt-[10px] ">
                     <motion.a 

@@ -5,11 +5,13 @@ import ServicesLayout from "../layout/ServicesLayout";
 import ContactLayout from "../layout/ContactLayout";
 import AboutLayout from "../layout/AboutLayout";
 import BlogLayout from "../layout/BlogLayout";
+import OneBlog from "../pages/oneBlog/OneBlog";
+// import AllBlogs from "../pages/blog/AllBlog";
 
 const HomeComp = lazy(() => import("../pages/homePage/HomeComp"))
 const Services = lazy(() => import("../pages/services/Services"))
 const Contact = lazy(() => import("../pages/contact/Contact"))
-const Blog = lazy(() => import("../pages/blog/Blog"))
+const AllBlogs = lazy(() => import("../pages/blog/AllBlog"))
 const About = lazy(() => import("../pages/about/About"))
 
 
@@ -55,13 +57,27 @@ export const element = createBrowserRouter([
         ]
     },
     {
-        path: "/blog",
+        path: "/blogs",
         element: <BlogLayout />,
         children: [
             {
                 index: true,
-                element: <Blog />
+                element: <AllBlogs />
+            },
+            {
+                path: "oneblog",
+                element: <OneBlog />
             }
         ]
     },
+    // {
+    //     path: "/oneblog",
+    //     element: <OneBlogLayout />,
+    //     children: [
+    //         {
+    //             index: true,
+    //             element: <OneBlog />
+    //         }
+    //     ]
+    // },
 ])

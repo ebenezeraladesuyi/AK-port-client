@@ -99,7 +99,7 @@ const BlogHome = () => {
             <div className="w-full text-[10px] md:text-[12px] flex items-center justify-between  text-blue-400">
                 <h5 className="font-bold text-[14px] md:text-[18px] lg:text-[22px] ">Blogs</h5>
 
-                <NavLink to="/allblogs" >
+                <NavLink to="/blogs" >
                     <div className="flex gap-2 items-center text-orange-400 cursor-pointer animate-bounce ">
                         <h6 className="">See all Blogs</h6>
                         <div className="hidden md:block"><FaArrowRightLong /></div>

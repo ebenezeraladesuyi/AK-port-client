@@ -3,7 +3,7 @@
 import { Outlet } from "react-router-dom"
 import { Footer, Header } from "../components"
 
-const AboutLayout = () => {
+const OneBlogLayout = () => {
   return (
     <div>
         <Header />
@@ -13,4 +13,4 @@ const AboutLayout = () => {
   )
 }
 
-export default AboutLayout
+export default OneBlogLayout
