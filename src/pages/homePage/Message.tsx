@@ -9,7 +9,7 @@ const Message = () => {
             <h1 className="text-[25px] md:text-[30px] text-center md:text-left font-bold md:w-[60%] lg:text-[40px]">Send Me A Message And Let's Build Something Together.</h1>
 
             <NavLink to="/contact">
-              <button className="bg-blue-400 animate-pulse md:h-[50px] lg:w-[150px]">
+              <button className="bg-blue-400 animate-pulse md:h-[50px] lg:w-[150px] text-white">
                 Contact Me
               </button>
             </NavLink>
