@@ -31,7 +31,7 @@ const Footer = () => {
         try {
             const subscribe = await axios.post(`${url}/sub/createsubscription`, formData)
 
-            console.log("subscription successfull", subscribe.data.data);
+            console.log("subscription successfull", subscribe.data);
 
             // reset formData
             setFormData({
@@ -39,9 +39,9 @@ const Footer = () => {
             })
             setError(null)
 
-            if (subscribe.data.message) {
+            if (subscribe.data.message === "subscription successful") {
                 Swal.fire({
-                  title: "Subscription Successful",
+                  title: "Subscription Successfull",
                 //   text: "Thank You for registering. We will reach out to you via email or call.",
                   icon: "success",
                 })
