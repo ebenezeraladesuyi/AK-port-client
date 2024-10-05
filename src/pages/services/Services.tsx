@@ -27,7 +27,7 @@ const Services = () => {
         <ServicesCard2 
           icon={mentor}
           title="MENTORSHIP"
-          details=" am deeply committed to nurturing the next generation of tech talent. Through mentorship, I offer guidance, support, and practical advice to aspiring developers and entrepreneurs. I help them navigate their career paths, overcome technical challenges, and build the confidence they need to succeed in the industry.."
+          details="I am deeply committed to nurturing the next generation of tech talent. Through mentorship, I offer guidance, support, and practical advice to aspiring developers and entrepreneurs. I help them navigate their career paths, overcome technical challenges, and build the confidence they need to succeed in the industry.."
         />
 
         <hr className="border-[1px] w-full border-gray-300 mt-[20px] mb-[20px]" />
