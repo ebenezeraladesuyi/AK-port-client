@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import heroImage from "../../assets/images/hero/AkeenSuaraHero.png";
 import Typewriter from 'typewriter-effect';
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaStackOverflow } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+// import { FaStackOverflow } from "react-icons/fa";
+// import { FaTwitter } from "react-icons/fa";
 import { FaSlack } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 
@@ -87,8 +87,8 @@ const Hero = () => {
                         transition={{ duration: 1.4, delay: 1.9 }}
                     >
                         <FaLinkedinIn />
-                    </motion.a> |
-                    <motion.a 
+                    </motion.a>  |
+                   {/*  <motion.a 
                         className="text-white ml-[5px] mr-[5px] md:ml-[10px] nd:mr-[10px]" href=""
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const Hero = () => {
                         transition={{ duration: 1.4, delay: 2.5 }}
                     >
                         <FaTwitter />
-                    </motion.a> |
+                    </motion.a> | */}
                     <motion.a 
                         className="text-white ml-[5px] mr-[5px] md:ml-[10px] nd:mr-[10px]" href=""
                         initial={{ opacity: 0, y: -50 }}
