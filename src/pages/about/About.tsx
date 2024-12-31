@@ -16,16 +16,16 @@ const About = () => {
 
         <div className="text-[15px] md:text-[18px] lg:text-[21px] text-justify w-full md:w-[55%]">
           <p className="mb-[10px]">
-            <span className="font-bold ">AKEEM SUARA</span> is lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat et animi architecto, quasi blanditiis veritatis, impedit, nam magnam debitis ipsum tenetur. Dicta facere commodi rerum reiciendis iusto minima! Alias eius adipisci sapiente ad eum laudantium earum ex delectus corporis doloremque iste eaque error, reiciendis omnis eveniet laboriosam vel labore corrupti, maiores, porro repellat? Veniam esse modi a rerum illum expedita. Illum officia quam porro sint quod harum sunt corrupti, nesciunt nulla dolorem temporibus dignissimos laborum iusto dolorum quas itaque cumque error neque atque maiores veniam architecto totam asperiores sequi? Dicta, doloribus porro dolor voluptates repudiandae ex minima libero numquam eius?
+            <span className="font-bold ">AKEEM SUARA,</span> a Senior Software Engineer with over six years of experience crafting world-class software solutions in FinTech, banking, and beyond. Currently leading the Banking Team at top FinTech cmpany as an Engineering Manager, I specialize in designing scalable systems that drive efficiency and growth.
+          </p>
+
+          <p className="mb-[10px]">
+            My journey began with a Bachelor’s degree in Computer Science from the Federal University of Technology Akure, followed by hands-on experience at industry-leading firms like TeamApt and Digicore. Over the years, I’ve honed my skills in software engineering, ethical hacking, and mentorship, achieving milestones like completing 3,000 mentorship minutes and hosting over 50 mentorship sessions with ADPList. Beyond my technical acumen, I’m passionate about sharing knowledge. As a TEDx speaker and global mentor, I’ve inspired aspiring technologists to reach their potential. My dedication to innovation and coaching has earned me recognition in the tech community as a leader and mentor.
           </p>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et autem expedita! Temporibus perspiciatis dignissimos, omnis aliquid corporis iure voluptatum! Harum suscipit quam enim laudantium ex reprehenderit, fugiat ipsam mollitia nam architecto error explicabo nemo velit obcaecati dolorem quaerat. Consectetur eaque quia suscipit magnam sit pariatur et aperiam sapiente, neque, laboriosam optio, nemo temporibus. Deserunt distinctio a officia perspiciatis id itaque voluptatum quidem dolorum similique, et tenetur earum reprehenderit vero consequatur, hic vitae nisi architecto, ullam accusantium ipsa deleniti fugit nulla? Ullam, laborum eos est officiis quod fugiat sequi? Expedita ad autem fugit nulla esse optio ipsam exercitationem voluptas magnam.
+            This portfolio showcases my work, projects, and achievements. Whether you’re here to explore my services or learn more about my contributions to the tech world, I invite you to connect and join me in building impactful solutions for a better tomorrow.
           </p>
-
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam quibusdam, omnis cupiditate iure tempore porro veritatis mollitia quo dolores! Iste mollitia amet cum explicabo laborum quidem in quis impedit minima incidunt eos obcaecati, enim est illo eum eius libero nihil modi commodi fugit quibusdam. Modi dicta numquam quo sed mollitia quam laudantium maiores, assumenda nam. Reiciendis odio amet et deserunt molestias voluptatum sunt error, similique beatae accusamus minima, blanditiis quidem corporis a vel nulla mollitia est veniam soluta. Amet, harum iure. Nemo sunt deserunt magnam adipisci quis voluptatibus blanditiis et! Officia, ea aliquid! Non ullam ipsum dicta quisquam dolorem?
-          </p> */}
           
         </div>
       </div>

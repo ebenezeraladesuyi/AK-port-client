@@ -1,12 +1,13 @@
 
 
 import { Outlet } from "react-router-dom"
-import { Footer, Header } from "../components"
+import { Footer, Header, ScrollToTop } from "../components"
 
 const ServicesLayout = () => {
   return (
     <div>
         <div>
+        <ScrollToTop />
             <Header />
             <Outlet />
             <Footer />

@@ -18,7 +18,7 @@ const NewsLetter = () => {
             <form className=" flex flex-col md:flex-row gap-3 justify-center">
                 {/* <div className="flex flex-col gap-1">
                     <h2 className="text-[16px] font-bold text-white">Email</h2> */}
-                    <input type="email" className=" rounded-md bg-[#353535] h-[45px] w-[]full md:w-[350px] outline-none text-white pl-[10px]" placeholder="Email"/>
+                    <input type="email" className=" rounded-md bg-[#353535] h-[45px] w-[]full md:w-[350px] outline-none text-white pl-[10px]" placeholder="Email" required/>
                 {/* </div> */}
 
                 <button className="h-[45px] animate-pulse text-blue-400">Subscribe</button>

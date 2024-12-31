@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import heroImage from "../../assets/images/hero/AkeenSuaraHero.png";
 import Typewriter from 'typewriter-effect';
 import { FaLinkedinIn } from "react-icons/fa";
+import { SiBuymeacoffee } from "react-icons/si";
 // import { FaStackOverflow } from "react-icons/fa";
 // import { FaTwitter } from "react-icons/fa";
-import { FaSlack } from "react-icons/fa6";
+// import { FaSlack } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import adp from "../../assets/images/hero/adpList.png"
 
 
 const Hero = () => {
@@ -81,22 +83,24 @@ const Hero = () => {
 
                 <div className="flex items-center gap-2 text-white text-[20px] lg:text-[30px] mt-[10px] ">
                     <motion.a 
-                        className="text-white mr-[5px] md:mr-[10px]" href=""
+                        className="text-white mr-[5px] md:mr-[10px]" href="https://linkedin.com/in/akeem-suara"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.4, delay: 1.9 }}
                     >
                         <FaLinkedinIn />
                     </motion.a>  |
-                   {/*  <motion.a 
-                        className="text-white ml-[5px] mr-[5px] md:ml-[10px] nd:mr-[10px]" href=""
+
+                     <motion.a 
+                        className="text-white ml-[5px] mr-[5px] md:ml-[10px] nd:mr-[10px]" href="https://buymeacoffee.com/akeempositive"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.4, delay: 2.2 }}
                     >
-                        <FaStackOverflow />
+                        <SiBuymeacoffee />
                     </motion.a> |
-                    <motion.a 
+
+                    {/* <motion.a 
                         className="text-white ml-[5px] mr-[5px] md:ml-[10px] nd:mr-[10px]" href=""
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -104,13 +108,14 @@ const Hero = () => {
                     >
                         <FaTwitter />
                     </motion.a> | */}
+
                     <motion.a 
-                        className="text-white ml-[5px] mr-[5px] md:ml-[10px] nd:mr-[10px]" href=""
+                        className="text-white ml-[5px] mr-[5px] md:ml-[10px] nd:mr-[10px]" href="https://adplist.org/mentors/akeem-suara"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.4, delay: 2.8 }}
                     >
-                        <FaSlack />
+                        <img src={adp} alt="" className="w-[27px] lg:w-[40px]" />
                     </motion.a> 
                 </div>
             </div>

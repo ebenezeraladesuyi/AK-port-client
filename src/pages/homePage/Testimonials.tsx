@@ -76,15 +76,26 @@ const Testimonials = () => {
 
                 <Slider {...settings} className="w-[95%] px-10 mt-[10px] ml-[6px] md:w-[50%] lg:w-[60%]" >
 
-                    {/* <h2 className="text-[13px] md:text-[16px] lg:text-[20px] text-center">"Remarkable experience! I got a Sitting Room Chairs from Divine Great last year, and it was dope. No stress, No hypertension. I was home, and my products got delivered to me. Highly recommended!" <br /><span className="font-bold mt-[30px] text-[#3e4095]">- ADEOLA MICHEAL</span></h2> */}
+                    {/* <h2 className="text-[13px] md:text-[16px] lg:text-[20px] text-center">"Exceptional Software Solutions" - "His expertise in software engineering and keen understanding of financial systems streamlined our processes and boosted efficiency by 40%. Akeem’s proactive communication and innovative approach ensure every project’s success. Highly recommended!"<br /><span className="font-bold mt-[30px] text-[#3e4095]">- Adeola Ayodeji</span></h2> */}
 
-                    {/* <h2 className="text-[13px] md:text-[16px] lg:text-[20px] text-center">"They have this strong sense of customer connection. You just feel like you are transacting with your long-time partner. I've done several business with them and all turned out well. A reliable brand to do business with." <br /><span className="font-bold text-[#3e4095] mt-[30px]">- UCHE COLLIN</span></h2> */}
+                    {/* <h2 className="text-[13px] md:text-[16px] lg:text-[20px] text-center">"A Mentor Like No Other" - "His mentorship has been a game-changer for my career. His guidance helped me transition from a junior developer to a lead role in less than a year. His ability to explain complex concepts with clarity and provide actionable insights sets him apart. I’m truly grateful for his dedication and support." <br /><span className="font-bold text-[#3e4095] mt-[30px]">- Ebenezer Aladesuyi</span></h2> */}
 
-                    {/* <h2 className="text-[13px] md:text-[16px] lg:text-[20px] text-center w-[90%] md:w-[70%] lg:w-[60%]">"Incredible business brand! First time I did business with Divine Great, I thought they were like my previous business people. After I purchased my first house, they delivered all my interior decoration products, and now, after more business transaction, I can say, you can trust Divine Great." <br /><span className="font-bold mt-[30px] text-[#3e4095]">- IBRAHIM ABDULLAHI</span></h2> */}
+                    {/* <h2 className="text-[13px] md:text-[16px] lg:text-[20px] text-center w-[90%] md:w-[70%] lg:w-[60%]">"Driving Growth and Innovation" - "As a Senior Software Engineer, Akeem played a pivotal role in the development of our core banking application. His innovative mindset and leadership skills ensured the project was completed ahead of schedule, meeting all compliance standards. His contributions have significantly impacted our growth trajectory." <br /><span className="font-bold mt-[30px] text-[#3e4095]">- Chinonso Eze</span></h2> */}
 
-                    <TestiCard />
-                    <TestiCard />
-                    <TestiCard />
+                    <TestiCard 
+                      details="'Exceptional Software Solutions' - 'His expertise in software engineering and keen understanding of financial systems streamlined our processes and boosted efficiency by 40%. Akeem’s proactive communication and innovative approach ensure every project’s success. Highly recommended!'"
+                      person="Adeola Ayodeji"
+                    />
+
+                    <TestiCard 
+                      details="'A Mentor Like No Other' - 'His mentorship has been a game-changer for my career. His guidance helped me transition from a junior developer to a lead role in less than a year. His ability to explain complex concepts with clarity and provide actionable insights sets him apart. I’m truly grateful for his dedication and support'"
+                      person="Ebenezer Aladesuyi"
+                    />
+
+                    <TestiCard 
+                      details="'Driving Growth and Innovation' - 'As a Senior Software Engineer, Akeem played a pivotal role in the development of our core banking application. His innovative mindset and leadership skills ensured the project was completed ahead of schedule, meeting all compliance standards. His contributions have significantly impacted our growth trajectory."
+                      person="Chinonso Eze"
+                    />
 
                 </Slider>
             </div>

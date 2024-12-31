@@ -77,22 +77,25 @@ const Contact = () => {
           <h1 className="text-[20px] font-bold text-white text-center md:text-left">Contact Us</h1>
 
           <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3 text-white">
-            <input className="w-full h-[45px] pl-4 border-white border-[1px] rounded-[7px] bg-transparent" type="text" placeholder="Name" 
+            <input className="w-full h-[45px] pl-4 border-white border-[1px] rounded-[7px] bg-transparent outline-none" type="text" placeholder="Name" 
             name="name"
             value={formData.name}
             onChange={handleChange}
+            required
             />
 
-            <input className="w-full h-[45px] pl-4 border-white border-[1px] rounded-[7px] bg-transparent"  type="email" placeholder="Email"  
+            <input className="w-full h-[45px] pl-4 border-white border-[1px] rounded-[7px] bg-transparent outline-none"  type="email" placeholder="Email"  
             name="email"
             value={formData.email}
             onChange={handleChange}
+            required
             />
 
-            <textarea className="w-full h-[100px] pl-4 border-white border-[1px] rounded-[7px] bg-transparent pt-3"  placeholder="Your Content"  
+            <textarea className="w-full h-[100px] pl-4 border-white border-[1px] rounded-[7px] bg-transparent pt-3 outline-none"  placeholder="Your Content"  
             name="content"
             value={formData.content}
             onChange={handleChange}
+            required
             />
 
             { loading? (

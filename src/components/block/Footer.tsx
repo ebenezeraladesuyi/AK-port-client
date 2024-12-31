@@ -3,17 +3,19 @@ import React from 'react'
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaStackOverflow } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+// import { FaTwitter } from "react-icons/fa";
 import { FaSlack } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaThreads } from "react-icons/fa6";
+// import { FaFacebook } from "react-icons/fa";
+// import { FaInstagram } from "react-icons/fa";
+// import { FaThreads } from "react-icons/fa6";
 import { iSubscribe } from '../../types/interface';
 import axios from 'axios';
 import { url } from '../../utils/Api';
 // import { toast } from 'react-toastify';
 import { DatasIsaLoading } from '../../pages/isLoading/DataIsLoading';
 import Swal from 'sweetalert2';
+import { SiBuymeacoffee } from 'react-icons/si';
+import adp from "../../assets/images/hero/adpList.png";
 
 const Footer = () => {
 
@@ -100,29 +102,42 @@ const Footer = () => {
 
         <hr className="border-[1px] border-[#e4e4e4bc] w-[70%]" />
 
-        <div className="flex flex-wrap w-[70%] justify-center gap-3">
-            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
+        <div className="flex flex-wrap w-[70%] justify-center items-center gap-3">
+            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="https://linkedin.com/in/akeem-suara">
                 <FaLinkedinIn />
+            </a> 
+
+            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="https://buymeacoffee.com/akeempositive">
+                <SiBuymeacoffee />
+            </a> 
+
+            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="https://adplist.org/mentors/akeem-suara">
+                <img src={adp} alt="" className="w-[27px] lg:w-[40px]" />
             </a> 
             
             <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaStackOverflow />
             </a>
-            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
+
+            {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaTwitter />
-            </a>
+            </a> */}
+
             <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaSlack />
             </a>
-            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
+
+            {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaThreads />
-            </a>
-            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
+            </a> */}
+
+            {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaFacebook />
-            </a>
-            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
+            </a> */}
+
+            {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaInstagram />
-            </a>
+            </a> */}
         </div>
 
         <div className=" w-full flex items-center justify-center z-20">
