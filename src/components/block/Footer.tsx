@@ -115,17 +115,17 @@ const Footer = () => {
                 <img src={adp} alt="" className="w-[27px] lg:w-[40px]" />
             </a> 
             
-            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
+            {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaStackOverflow />
-            </a>
+            </a> */}
 
             {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaTwitter />
             </a> */}
 
-            <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
+            {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaSlack />
-            </a>
+            </a> */}
 
             {/* <a className="text-white text-[25px] md:text-[30px] mr-[5px] md:mr-[10px]" href="">
                 <FaThreads />
