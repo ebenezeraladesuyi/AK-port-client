@@ -10,3 +10,12 @@ export interface iMail {
     email: string;
     content: string;
 }
+
+export interface iBlog {
+    _id: string,
+    blogImage: string,
+    author: string,
+    title: string,
+    details: string,
+    createdAt: any,
+}

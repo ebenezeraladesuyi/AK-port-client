@@ -65,7 +65,7 @@ export const element = createBrowserRouter([
                 element: <AllBlogs />
             },
             {
-                path: "oneblog",
+                path: "oneblog/:id",
                 element: <OneBlog />
             }
         ]
