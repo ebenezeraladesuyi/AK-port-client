@@ -20,7 +20,7 @@ const Experience = () => {
                 transition={{ duration: 1.4, delay: 1.0 }}
             >
                 <h1 className="text-[20px] md:text-[18px] lg:text-[25px] text-center md:pt-[10px] lg:mt-0">
-                    over <br/><span className="text-[65px] md:text-[55px] lg:text-[90px] font-[600] text-blue-400">05</span><br /> Years of Experience
+                    over <br/><span className="text-[65px] md:text-[55px] lg:text-[90px] font-[600] text-blue-400">07</span><br /> Years of Experience
                 </h1>
 
                 <div className="w-[80%] md:w-[70%] border-t-[1px] border-l-[1px] border-r-[1px] border-white rounded-md p-2 text-center md:absolute md:right-[-30px] lg:right-[-100px] md:bottom-[30px] lg:bottom-[30px] bg-[#2e2c1f]">
