@@ -9,7 +9,7 @@ const About = () => {
         ABOUT
       </div>
 
-      <div className="w-[90%] flex flex-col md:flex-row justify-center md:justify-between gap-5 bg-white py-[30px] mt-[20px]">
+      <div className="w-[90%] flex flex-col md:flex-row justify-center md:justify-between gap-5 bg-white text-black py-[30px] mt-[20px]">
         <div className="w-full md:w-[40%]">
           <img src={akeem} className="w-full" alt="" />
         </div>
