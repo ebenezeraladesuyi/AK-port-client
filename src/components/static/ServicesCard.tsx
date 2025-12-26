@@ -21,7 +21,7 @@ const ServicesCard:React.FC<serviceCard> = ({icon, title, details}) => {
                 {title}
             </h1>
 
-            <p className="text-[13px] md:text-[15px] lg:text-[18px] font-bold text-justify text-[#00000097]">
+            <p className="text-[13px] md:text-[15px] lg:text-[18px] font-bold text-justify text-[#ffffff]">
                 {/* As a dedicated software engineer, I am passionate about creating reliable, scalable, and innovative software solutions that address real-world challenges. With expertise in various programming languages, frameworks, and modern technologies, I strive to build high-performance applications that deliver both functionality and user satisfaction. My work focuses on clean, maintainable code, user-centric design, and a commitment to delivering software that not only meets client expectations but also contributes to their overall business goals. Whether it’s front-end development, back-end architecture, or full-stack solutions, I take pride in crafting software that drives efficiency and fosters growth. */}
                 {details}
             </p>
