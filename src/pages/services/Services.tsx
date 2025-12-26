@@ -3,7 +3,7 @@
 import ServicesCard from "../../components/static/ServicesCard"
 import software from "../../assets/images/services/software.png";
 import mentor from "../../assets/images/services/mentorship.png";
-import ted from "../../assets/images/services/tedTalk.png";
+// import ted from "../../assets/images/services/tedTalk.png";
 import consult from "../../assets/images/services/consult.png";
 import ServicesCard2 from "../../components/static/ServiceCard2";
 
@@ -41,11 +41,11 @@ const Services = () => {
         <hr className="border-[1px] w-full border-gray-300 mt-[20px] mb-[20px]" />
 
       
-        <ServicesCard2 
+        {/* <ServicesCard2 
           icon={ted}
           title="TEDx TALK"
           details="As a speaker, I have delivered TED Talks focused on the intersection of technology, innovation, and human potential. I believe that technology, when used thoughtfully, can be a powerful tool for solving global challenges and improving lives. My talks are designed to inspire audiences to think creatively and embrace the possibilities of the digital world, while also encouraging a deeper understanding of the ethical and social implications of technological advancement."
-        />
+        /> */}
         
         <hr className="border-[1px] w-full border-gray-300 mt-[20px] mb-[20px]" />
       </div>

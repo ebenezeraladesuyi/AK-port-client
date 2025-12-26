@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 import { ExperienceCard } from "../../components"
 import software from "../../assets/images/services/software.png";
 import mentor from "../../assets/images/services/mentorship.png";
-import ted from "../../assets/images/services/tedTalk.png";
+// import ted from "../../assets/images/services/tedTalk.png";
 import consult from "../../assets/images/services/consult.png";
 import { motion } from "framer-motion";
 
@@ -50,11 +50,11 @@ const Experience = () => {
                         details="As a tech consultant, I provide strategic insights and solutions to streamline..."
                     />
                     
-                    <ExperienceCard 
+                    {/* <ExperienceCard 
                         logo={ted}
                         title="TEDx Talk"
                         details="I’m passionate about sharing knowledge and inspiring change through impactful..."
-                    />
+                    /> */}
                 </div>
 
                 <NavLink to="/services">
