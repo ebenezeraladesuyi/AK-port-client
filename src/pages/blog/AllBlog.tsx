@@ -73,7 +73,7 @@ const AllBlogs = () => {
                     {currentBlogs && currentBlogs.map((blog: iBlog) => (
                         <div 
                           key={blog._id} 
-                          className="w-full lg:w-[70%] py-[10px] flex flex-col md:flex-row gap-3 bg-white">
+                          className="w-full lg:w-[70%] py-[10px] flex flex-col md:flex-row gap-3 bg-[#ffffff] text-[#000000]">
                             <div className="w-full md:w-[40%] border-[1px] border-gray-200 rounded-[6px]">
                                 <img className="w-full" src={blog?.blogImage} alt={blog?.title} />
                                 {/* <img className="w-full" src={lean} alt="" /> */}
@@ -100,7 +100,7 @@ const AllBlogs = () => {
                                     </h5>
                                 </div>
 
-                                <h5 className="text-justify text-[11px] lg:text-[13px]">
+                                <h5 className="text-justify text-[11px] lg:text-[13px] text-[#000000]">
                                     {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, ipsa totam excepturi qui tempora sapiente neque. Eaque provident dolore accusamus aliquam sapiente debitis obcaecati eos... */}
                                     {blog?.details.slice(0, 250)}
                                     ...

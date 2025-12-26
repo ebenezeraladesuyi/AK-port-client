@@ -66,7 +66,7 @@ const OneBlog = () => {
 
   return (
     <div className="w-full flex justify-center items-center bg-black py-[30px]">
-        <div className="w-[90%] mt-[80px] md:mt-[100px] flex flex-col gap-4 relative bg-white p-6">
+        <div className="w-[90%] mt-[80px] md:mt-[100px] flex flex-col gap-4 relative bg-[#ffffff] text-[#000000] p-6">
             <NavLink to="/blogs">
                 <h6 className="bg-[#ec0e0e] p-1 px-2 text-white text-[13px] w-[100px] text-center flex items-center justify-center gap-2"><span><FaArrowLeftLong /></span>Blog</h6>
             </NavLink>
