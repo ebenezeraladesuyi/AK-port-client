@@ -171,42 +171,12 @@ const OneBlog = () => {
                                     </div>
                                 </div>
 
-                                {/* Action Buttons */}
-                                {/* <div className="flex flex-wrap gap-4 pt-8 border-t border-gray-100">
-                                    <button
-                                        onClick={shareBlog}
-                                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 rounded-lg font-semibold hover:from-blue-100 hover:to-indigo-100 transition-all duration-300"
-                                    >
-                                        <FaShareAlt />
-                                        Share Article
-                                    </button>
-                                    <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-50 to-teal-50 text-emerald-600 rounded-lg font-semibold hover:from-emerald-100 hover:to-teal-100 transition-all duration-300">
-                                        <FaBookmark />
-                                        Save for Later
-                                    </button>
-                                </div> */}
                             </div>
                         </article>
                     </div>
 
                     {/* Sidebar with Suggested Blogs */}
                     <div className="space-y-8">
-                        {/* Share Card */}
-                        {/* <div className="bg-white rounded-2xl shadow-lg p-6">
-                            <h3 className="text-lg font-bold text-gray-900 mb-4">Share This Article</h3>
-                            <div className="flex gap-3">
-                                {['Facebook', 'Twitter', 'LinkedIn'].map((platform) => (
-                                    <button
-                                        key={platform}
-                                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-50 text-gray-700 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300"
-                                    >
-                                        <IoShareSocialOutline />
-                                        {platform}
-                                    </button>
-                                ))}
-                            </div>
-                        </div> */}
-
                         {/* Suggested Blogs */}
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
                             <div className="p-6 border-b border-gray-100">
@@ -283,24 +253,7 @@ const OneBlog = () => {
                 </div>
             </div>
 
-            {/* Related Tags Section */}
-            {/* {blog.tags && blog.tags.length > 0 && (
-                <div className="max-w-7xl mx-auto px-4 py-8 mt-8">
-                    <div className="bg-white rounded-2xl shadow-lg p-6">
-                        <h3 className="text-lg font-bold text-gray-900 mb-4">Article Tags</h3>
-                        <div className="flex flex-wrap gap-2">
-                            {blog.tags?.map((tag: any, index: any) => (
-                                <span
-                                    key={index}
-                                    className="px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 rounded-full text-sm font-medium hover:from-blue-100 hover:to-indigo-100 transition-all duration-300 cursor-pointer"
-                                >
-                                    #{tag}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            )} */}
+            
 
             {/* Footer Navigation */}
             <div className="max-w-7xl mx-auto px-4 py-8 mt-8">
