@@ -12,6 +12,7 @@ export interface iMail {
 }
 
 export interface iBlog {
+    tags: any;
     _id: string,
     blogImage: string,
     author: string,
