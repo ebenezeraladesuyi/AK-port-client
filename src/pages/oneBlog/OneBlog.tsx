@@ -4,8 +4,12 @@ import { useEffect, useState } from "react";
 import { iBlog } from "../../types/interface";
 import axios from "axios";
 import { DatasIsaLoading } from "../isLoading/DataIsLoading";
-import { FaRegCalendarCheck, FaShareAlt, FaBookmark } from "react-icons/fa";
-import { IoTimeOutline, IoShareSocialOutline } from "react-icons/io5";
+import { FaRegCalendarCheck, 
+        // FaShareAlt, FaBookmark 
+        } from "react-icons/fa";
+import { IoTimeOutline, 
+        // IoShareSocialOutline 
+        } from "react-icons/io5";
 import { FiClock } from "react-icons/fi";
 import { url } from "../../utils/Api";
 
@@ -55,15 +59,15 @@ const OneBlog = () => {
         ));
     };
 
-    const shareBlog = () => {
-        if (navigator.share && blog) {
-            navigator.share({
-                title: blog.title,
-                text: blog.details.slice(0, 100) + "...",
-                url: window.location.href,
-            });
-        }
-    };
+    // const shareBlog = () => {
+    //     if (navigator.share && blog) {
+    //         navigator.share({
+    //             title: blog.title,
+    //             text: blog.details.slice(0, 100) + "...",
+    //             url: window.location.href,
+    //         });
+    //     }
+    // };
 
     if (loading) {
         return (
