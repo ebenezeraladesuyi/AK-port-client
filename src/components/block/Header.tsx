@@ -33,7 +33,7 @@ const Header = () => {
     }, [])
 
   return (
-    <motion.div className={`w-full h-[90px] lg:h-[130px flex lg:justify-center items-center font-pop fixed z-40 bg-[#000000 text-white transition-all duration-1000 ease-in-out ${isScrolled ? 'bg-[#000000c8] shadow-md' : ''}`}
+    <motion.div className={`w-full h-[90px] lg:h-[130px flex lg:justify-center items-center font-pop fixed z-40 bg-[#000000 text-white bg-[#f2efef] transition-all duration-1000 ease-in-out ${isScrolled ? 'bg-[#000000c8] shadow-md' : ''}`}
     initial={{ opacity: 0, y: -50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.7 }}
