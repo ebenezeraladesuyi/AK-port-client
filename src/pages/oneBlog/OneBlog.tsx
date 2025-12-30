@@ -48,50 +48,51 @@ const OneBlog = () => {
     };
 
     const fetchBlogData = async () => {
-        setLoading(true);
-        try {
-            const blogResponse = await axios.get(`${url}/blog/getoneblog/${id}`);
-            setBlog(blogResponse.data);
+    setLoading(true);
+    try {
+        const blogResponse = await axios.get(`${url}/blog/getoneblog/${id}`);
+        setBlog(blogResponse.data);
 
-            // Calculate reading time
-            const wordCount = blogResponse.data.details.split(/\s+/).length;
-            setReadingTime(Math.ceil(wordCount / 200));
+        // Calculate reading time
+        const wordCount = blogResponse.data.details.split(/\s+/).length;
+        setReadingTime(Math.ceil(wordCount / 200));
 
-            // Fetch all blogs for suggestions
-            const allBlogsResponse = await axios.get(`${url}/blog/allblogs`);
-            const allBlogs = allBlogsResponse.data || [];
-            const filteredBlogs = allBlogs.filter((b: iBlog) => b._id !== id);
-            const shuffled = [...filteredBlogs].sort(() => 0.5 - Math.random());
-            setSuggestedBlogs(shuffled.slice(0, 3));
+        // Fetch all blogs for suggestions
+        const allBlogsResponse = await axios.get(`${url}/blog/allblogs`);
+        const allBlogs = allBlogsResponse.data || [];
+        const filteredBlogs = allBlogs.filter((b: iBlog) => b._id !== id);
+        const shuffled = [...filteredBlogs].sort(() => 0.5 - Math.random());
+        setSuggestedBlogs(shuffled.slice(0, 3));
 
-            // Fetch comments
-            const commentsResponse = await axios.get(`${url}/action/blogs/${id}/getcomments`);
-            setComments(commentsResponse.data || []);
+        // Fetch comments
+        const commentsResponse = await axios.get(`${url}/action/blogs/${id}/getcomments`);
+        setComments(commentsResponse.data || []);
 
-            // Check if user has liked this blog
-            const userIdentifier = await getUserIdentifier();
-            const likeResponse = await axios.get(`${url}/action/blogs/${id}/check-like`, {
-                params: { userIdentifier }
-            });
-            setLikeStatus({
-                liked: likeResponse.data?.liked || false,
-                likeCount: likeResponse.data?.likeCount || 0
-            });
+        // Check if user has liked this blog with count
+        const userIdentifier = await getUserIdentifier();
+        const likeResponse = await axios.get(`${url}/action/blogs/${id}/check-like-with-count`, {
+            params: { userIdentifier }
+        });
+        setLikeStatus({
+            liked: likeResponse.data?.liked || false,
+            likeCount: likeResponse.data?.likeCount || 0
+        });
 
-            setLoading(false);
-        } catch (error) {
-            console.error("Error getting blog data:", error);
-            setLoading(false);
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Failed to load blog data',
-                background: '#1f2937',
-                color: '#ffffff',
-                confirmButtonColor: '#2563eb'
-            });
-        }
-    };
+        setLoading(false);
+    } catch (error) {
+        console.error("Error getting blog data:", error);
+        setLoading(false);
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Failed to load blog data',
+            background: '#1f2937',
+            color: '#ffffff',
+            confirmButtonColor: '#2563eb'
+        });
+    }
+};
+
 
     useEffect(() => {
         if (id) {
@@ -100,33 +101,41 @@ const OneBlog = () => {
     }, [id]);
 
     const handleLike = async () => {
-        if (!id) return;
+    if (!id || likeLoading) return;
+    
+    setLikeLoading(true);
+    
+    // Optimistically update UI
+    const wasLiked = likeStatus.liked;
+    const newLikedState = !wasLiked;
+    const newLikeCount = wasLiked 
+        ? Math.max(0, likeStatus.likeCount - 1) 
+        : likeStatus.likeCount + 1;
+    
+    setLikeStatus({
+        liked: newLikedState,
+        likeCount: newLikeCount
+    });
+    
+    try {
+        const userIdentifier = await getUserIdentifier();
         
-        setLikeLoading(true);
-        try {
-            const userIdentifier = await getUserIdentifier();
-            
-            if (likeStatus.liked) {
-                await axios.post(`${url}/action/blogs/${id}/unlike`, { userIdentifier });
-                setLikeStatus(prev => ({
-                    liked: false,
-                    likeCount: Math.max(0, prev.likeCount - 1)
-                }));
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Unliked!',
-                    text: 'You unliked this blog',
-                    background: '#1f2937',
-                    color: '#ffffff',
-                    confirmButtonColor: '#2563eb',
-                    timer: 1500
-                });
-            } else {
+        if (wasLiked) {
+            // Unlike
+            await axios.post(`${url}/action/blogs/${id}/unlike`, { userIdentifier });
+            Swal.fire({
+                icon: 'success',
+                title: 'Unliked!',
+                text: 'You unliked this blog',
+                background: '#1f2937',
+                color: '#ffffff',
+                confirmButtonColor: '#2563eb',
+                timer: 1500
+            });
+        } else {
+            // Like
+            try {
                 await axios.post(`${url}/action/blogs/${id}/like`, { userIdentifier });
-                setLikeStatus(prev => ({
-                    liked: true,
-                    likeCount: prev.likeCount + 1
-                }));
                 Swal.fire({
                     icon: 'success',
                     title: 'Liked!',
@@ -136,8 +145,33 @@ const OneBlog = () => {
                     confirmButtonColor: '#2563eb',
                     timer: 1500
                 });
+            } catch (likeError: any) {
+                if (likeError.response?.status === 400 && 
+                    likeError.response?.data?.message === 'You already liked this post') {
+                    // Already liked - this is fine, UI already updated
+                    // Optionally show a different message
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Already Liked',
+                        text: 'You have already liked this post',
+                        background: '#1f2937',
+                        color: '#ffffff',
+                        confirmButtonColor: '#2563eb',
+                        timer: 1000
+                    });
+                } else {
+                    // Revert optimistic update on other errors
+                    setLikeStatus({
+                        liked: wasLiked,
+                        likeCount: wasLiked ? likeStatus.likeCount : Math.max(0, likeStatus.likeCount - 1)
+                    });
+                    throw likeError;
+                }
             }
-        } catch (error) {
+        }
+    } catch (error: any) {
+        if (error.response?.status !== 400 || 
+            error.response?.data?.message !== 'You already liked this post') {
             console.error("Error with like action:", error);
             Swal.fire({
                 icon: 'error',
@@ -147,10 +181,11 @@ const OneBlog = () => {
                 color: '#ffffff',
                 confirmButtonColor: '#2563eb'
             });
-        } finally {
-            setLikeLoading(false);
         }
-    };
+    } finally {
+        setLikeLoading(false);
+    }
+};
 
     const handleSubmitComment = async (e: React.FormEvent) => {
         e.preventDefault();
